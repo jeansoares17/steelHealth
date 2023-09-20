@@ -1,0 +1,4 @@
+create table meta (id number(19,0) generated as identity, objetivo varchar2(255 char), pesoatual number(38,2) not null check (pesoatual>=0), altura number(38,2) check (altura>=0),pesoDesejado number(38,2) check (pesoDesejado>=0), primary key (id));
+create table treino (Treinoid number(19,0) generated as identity, AgrupamentoMuscular varchar2(255 char), NomeDoExercicio varchar2(255 char), QtdRpt number(38,2) not null check (QtdRpt>=0), QtdSeries number(38,2) not null check (QtdSeries>=0), primary key (Treinoid));
+create table alimentacao (Alimentacaoid number(19,0) generated as identity, TipoDaRefeicao varchar2(255 char), Descricao varchar2(255 char), QtdRefeicoes number(38,2) not null check (QtdRefeicoes>=0), primary key (Alimentacaoid));
+create table usuario (id number(19,0) generated as identity, email varchar2(255 char), nome varchar2(255 char), senha varchar2(255 char), primary key (id));
